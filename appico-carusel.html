@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appico Carusel </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+
+    <style>
+      header{
+          margin-bottom: 120px;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+      }
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.carusel{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.carusel .owl-item{
+    transform: scale(0.7);
+ transition: 0.5s;
+}
+.carusel .owl-item.center{
+    transform: scale(1);
+}
+.carusel .owl-nav{
+    font-size: 30px;
+    position: absolute;
+    height: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 40%;
+    outline: none;
+    align-items: center;
+}
+.owl-dots{
+    display: none;
+}
+.carusel .phone{
+    background-color: white;
+    border: 1px solid #999999;
+    width: 22%;
+    height: 75%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 40px;
+    box-shadow: 0 0 3px;
+}
+.carusel .display{
+    width: 85%;
+    height: 76%;
+    background-color: white;
+    border: 1px solid #dddddd;
+    position: absolute;
+    top: 7.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+.cam{
+    width: 7px;
+    height: 7px;
+    border: 1px solid #dddddd;
+    border-radius: 100px;
+    background-color: #eeeeee;
+    position: relative;
+    left: 80px;
+    top: 20px;
+    box-shadow: 0 0 3px;
+    z-index: 1;
+}
+.dinamic{
+    width: 60px;
+    height: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 50px;
+    background-color: #eeeeee;
+    position: relative;
+    left: 110px;
+    top: 13px;
+    box-shadow: 0 0 3px;
+    z-index: 1;
+}
+.button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #dddddd;
+    border-radius: 50px;
+    background-color: #ffffff;
+    position: relative;
+    left: 105px;
+    top: 450px;
+    z-index: 1;
+    box-shadow: 0 0 3px;
+
+}
+/* ADAPTIVE */
+@media (max-width: 1240px){
+    .container{
+        width: 920px;
+    }
+    .carusel .owl-item{
+    transform: scale(0.8);
+ transition: 0.5s;
+}
+.carusel .owl-item.center{
+    transform: scale(1);
+}
+.carusel .phone{
+width: 35%;
+}
+
+}
+@media (max-width: 960px){
+    .container{
+        width: 90%;
+    }
+.carusel .owl-item.center{
+    transform: scale(0.8);
+}
+.carusel .owl-nav{
+    display: none;
+}
+.carusel .phone{
+width: 100%;
+}
+}
+
+
+    </style>
+</head>
+<body>
+
+    <section class="carusel container">
+        <header>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique incidunt cumque libero, unde dolore facere aspernatur! Ducimus modi rerum explicabo?</p>
+        </header>
+    <div class="owl-carousel owl-theme">
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-8.jpg" alt=""> </div>
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-2.jpg" alt=""> </div>
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-3.jpg" alt=""> </div>
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-4.jpg" alt=""> </div>
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-6.jpg" alt=""> </div>
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-7.jpg" alt=""> </div>
+        <div> <img src="https://html.dynamiclayers.net/at/appico/img/screenshot-5.jpg" alt=""> </div>
+      </div>
+      <div class="phone">
+          <div class="display"></div>
+          <div class="cam"></div>
+          <div class="dinamic"></div>
+          <div class="button"></div>
+      </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script> 
+<script>
+    $(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    center:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        960:{
+            items:3
+        },
+        1240:{
+            items:5
+        }
+    }
+  });
+});
+</script>
+</body>
+</html>
